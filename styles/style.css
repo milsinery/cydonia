@@ -1,0 +1,53 @@
+/* global variable */
+
+:root {
+    /* colors */
+    --color-snow: hsl(0, 0%, 100%);
+    --color-graphite: hsl(0, 0%, 50%);
+    --color-cloud: hsl(0, 0%, 80%);
+
+    /* media */
+    --width-phone: 320px;
+    --width-fablet: 480px;
+    --width-tablet: 1000px;
+    --width-laptop: 1280px;
+    --width-desktop: 1440px;
+    --width-wide: 1921px;
+}
+
+
+/* base styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-graphite);
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* text styles */
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+}
