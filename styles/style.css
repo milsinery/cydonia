@@ -1,4 +1,4 @@
-/* global variable */
+/* Global variable */
 
 :root {
     /* colors */
@@ -8,7 +8,7 @@
 }
 
 
-/* base styles */
+/* Base styles */
 
 * {
     margin: 0;
@@ -20,14 +20,6 @@ html {
     height: 100%;
     width: 100%;
 }
-
-body {
-    background-image: url(/assets/images/bg.jpg);
-    background-size: cover;
-}
-
-
-/* text styles */
 
 h1 {
     font-size: 24px;
@@ -50,31 +42,68 @@ p {
 }
 
 
+/* Tags */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    height: 48px;
+    background: transparent;
+    width: 100%;
+}
+
+aside {
+    background-color: #fff;
+    border-radius: 4px;
+    width: 320px;
+}
+
+
+/* Classes */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: 16px;
+    padding-right: 16px;
+}
+
+.cards {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    max-width: 864px;
+}
+
+.card {
+    background-color: var(--color-snow);
+    border-radius: 4px;
+    min-height: 48px;
+    min-width: 320px;
+    margin-bottom: 8px;
+}
+
+
 /* media */
 
-/* Phone */
+/* Hide aside */
 
-@media (min-width: 320px) and (max-width: 640px) {
-    
+@media (max-width: 869px) {
+    aside {
+        display: none;
+    }
 }
 
+/* Retina */
 
-/* Tablet */
-
-@media (min-width: 641px) and (max-width: 1024px) {
-    
-}
-
-
-/* Desktop */
-
-@media (min-width: 1441px) and (max-width: 1920px) {
-
-}
-
-
-/* Wide */
-
-@media (min-width: 1921px) {
-    
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    body {
+        background-image: url(/assets/images/bg@2x.jpg);
+    }
 }
