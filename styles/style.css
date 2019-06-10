@@ -13,10 +13,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Roboto, sans-serif;
     color: var(--color-graphite);
 }
 
 html {
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -47,70 +50,92 @@ p {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-content: stretch;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-image: url(/assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
+    flex-basis: auto;
     display: flex;
     flex-shrink: 0;
+    flex-grow: 0;
     height: 48px;
     background: transparent;
 }
 
 aside {
-    background-color: transparent;
+    flex-shrink: 0;
+    overflow: auto;
+    background-color: var(--color-snow);
+    border-radius: 4px;
     border-radius: 4px;
     width: 320px;
     margin-left: 16px;
 }
 
+aside::-webkit-scrollbar {
+    width: 0;
+}
+
 footer {
+    flex-basis: auto;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 48px;
     text-align: center;
+    color: var(--color-snow);
 }
 
 
 /* Classes */
 
-.wrapper {
-    flex-shrink: inherit;
-    height: inherit;
+.menu_mobile {
+    box-shadow: -1px 0 2px 0 rgba(0,0,0, .2), -8px 0 8px 0 rgba(0,0,0, .1);
+    background-color: var(--color-snow);
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    bottom: -48px;
+    transition: all .15s ease-out;
+}
+
+.main {
+    height: 100%;
+    flex-basis: auto;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-content: stretch;
     padding-left: 16px;
     padding-right: 16px;
 }
 
 .cards {
+    overflow: auto;
     content: "";
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
     width: 100%;
     max-width: 864px;
 }
 
+.cards::-webkit-scrollbar {
+    width: 0;
+}
+
 .card {
+    overflow: hidden;
     background-color: var(--color-snow);
     border-radius: 4px;
     min-height: 48px;
     min-width: 320px;
     margin-bottom: 8px;
-}
-
-.bg {
-    background-image: url(/assets/images/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    position: 50%;
-    height: 100%;
-    width: 100%;
-
 }
 
 
@@ -126,9 +151,14 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .wrapper {
+    .main {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .menu_mobile {
+        bottom: 0;
+        transition: all .15s ease-in;
     }
 }
 
