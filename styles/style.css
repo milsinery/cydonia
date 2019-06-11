@@ -132,6 +132,61 @@ html {
     width: 0;
 }
 
+.cards__item {
+    margin-bottom: var(--space-normal);
+}
+
+.cards__item:last-child {
+    margin-bottom: 0;
+}
+
+.card {
+    overflow: hidden;
+    background-color: var(--color-snow);
+    border-radius: 4px;
+    min-height: 48px;
+    min-width: 320px;
+}
+
+.card__name {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+.card__icon {
+    margin-right: 8px;
+}
+
+.card__icon .icon  {
+    background-color: var(--color-sky);
+}
+
+.card__title {
+    color: 
+}
+
+.card__title .h2 {
+    color: var(--color-sky);
+}
+
+.card__description {
+    
+}
+
+.card__description .optional {
+    color: var(--color-cloud);
+}
+
+.card__nav {
+
+}
+
+.card__drag {
+
+}
+
 .sidebar {
     flex-shrink: 0;
     overflow: auto;
