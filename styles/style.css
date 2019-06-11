@@ -4,7 +4,8 @@
     /* colors */
     --color-snow: hsl(0, 0%, 100%);
     --color-graphite: hsl(0, 0%, 50%);
-    --color-cloud: hsl(0, 0%, 80%);
+    --color-sky: hsl(214, 76%, 72%);
+    --color-cloud: hsl(0, 0%, 70%);
 
     /* Space */
     --space-min: 4px;
@@ -35,31 +36,45 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+
+/* Text styles */
+
+.h1 {
     font-size: var(--text-big);
     font-weight: 400;
 }
 
-h2 {
+.h2 {
     font-size: var(--text-med);
-    font-weight: 400;
+    font-weight: 500;
 }
 
-h3 {
+.h3 {
     font-size: var(--text-normal);
     font-weight: 500;
 }
 
-p {
+.base {
     font-size: var(--space-normal);
     line-height: 20px;
 }
 
 .optional {
     font-size: var(--text-min);
-    line-height: 20px;
+    line-height: 14px;
+}
+
+
+/* Global components */
+
+.icon {
+    height: 32px;
+    width: 32px;
+    background-color: var(--color-snow);
+    border-radius: 50%;
 }
 
 
@@ -95,10 +110,9 @@ p {
 .menu_mobile {
     box-shadow: -1px 0 2px 0 rgba(0,0,0, .2), -8px 0 8px 0 rgba(0,0,0, .1);
     background-color: var(--color-snow);
-    position: fixed;
     height: 48px;
     width: 100%;
-    bottom: -48px;
+    display: none;
     transition: all .15s ease-out;
 }
 
@@ -116,22 +130,6 @@ p {
 
 .cards::-webkit-scrollbar {
     width: 0;
-}
-
-.cards__item {
-    margin-bottom: var(--space-normal);
-}
-
-.cards__item:last-child {
-    margin-bottom: 0;
-}
-
-.card {
-    overflow: hidden;
-    background-color: var(--color-snow);
-    border-radius: 4px;
-    min-height: 48px;
-    min-width: 320px;
 }
 
 .sidebar {
@@ -189,8 +187,7 @@ p {
     }
 
     .menu_mobile {
-        bottom: 0;
-        transition: all .15s ease-in;
+        display: initial;
     }
 }
 
