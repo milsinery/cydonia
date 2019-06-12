@@ -73,16 +73,6 @@ html {
 .icon {
     height: 32px;
     width: 32px;
-    background-color: var(--color-snow);
-    border-radius: 50%;
-}
-
-.icon_1 {
-    
-}
-
-.icon_1 path {
-    fill: var(--color-sky);
 }
 
 
