@@ -141,6 +141,7 @@ html {
 }
 
 .card {
+    position: relative;
     overflow: hidden;
     background-color: var(--color-snow);
     border-radius: 4px;
@@ -148,11 +149,9 @@ html {
     min-width: 320px;
 }
 
-.card__name {
+.card__content {
     display: flex;
-    align-items: center;
-    padding-left: 8px;
-    padding-top: 8px;
+    margin: 8px 40px 8px 8px;
 }
 
 .card__icon {
@@ -163,8 +162,15 @@ html {
     background-color: var(--color-sky);
 }
 
+.card__list {
+    display: flex;
+    flex-direction: column;
+}
+
 .card__title {
-    color: 
+    color: var(--color-sky);
+    margin-bottom: var(--space-min);
+    padding-top: 4px;
 }
 
 .card__title .h2 {
@@ -184,7 +190,15 @@ html {
 }
 
 .card__drag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
 
+.icon_drag {
+    background-color: var(--color-cloud);
 }
 
 .sidebar {
@@ -243,6 +257,18 @@ html {
 
     .menu_mobile {
         display: initial;
+    }
+
+    .card .card__content .card__list .card__description {
+        display: none;
+    }
+
+    .card .card__content .card__list .card__nav {
+        display: none;
+    }
+
+    .card .card__drag {
+        display: none;
     }
 }
 
