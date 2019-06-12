@@ -77,6 +77,14 @@ html {
     border-radius: 50%;
 }
 
+.icon_1 {
+    
+}
+
+.icon_1 path {
+    fill: var(--color-sky);
+}
+
 
 /* Components */
 
@@ -156,10 +164,6 @@ html {
 
 .card__icon {
     margin-right: 8px;
-}
-
-.card__icon .icon  {
-    background-color: var(--color-sky);
 }
 
 .card__list {
