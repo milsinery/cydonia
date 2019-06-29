@@ -64,11 +64,21 @@ html {
 .optional {
     font-size: var(--text-min);
     line-height: 14px;
-    color: var(--color-cloud);
+}
+
+a {
+    text-decoration: none;
 }
 
 
 /* Components */
+
+.icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-snow);
+}
 
 .wrapper {
     display: flex;
@@ -90,17 +100,34 @@ html {
     background: transparent;
 }
 
-.header__content-left {
+.header-left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 48px;
     flex-shrink: 0;
     flex-grow: 0;
-    background: yellow;
+    margin-right: var(--space-med);
 }
 
-.header__content-right {
+.header-logotype {
+    width: 32px;
+    height: 32px;
+    margin-right: var(--space-normal);
+    background-color: var(--color-snow);
+}
+
+.header-cabinet {
+    display: flex;
+    align-items: center;
+}
+
+.header-cabinet__title {
+    color: var(--color-snow);
+    text-decoration: none;
+}
+
+.header-right {
     visibility: hidden;
     display: flex;
     justify-content: flex-end;
@@ -108,31 +135,40 @@ html {
     height: 48px;
     flex-shrink: 0;
     flex-grow: 0;
-    background: yellow;
 }
 
-.header__logotype {
-    width: 32px;
-    height: 32px;
-    background-color: aqua;
+.header-widget {
+    display: flex;
+    align-items: center;
 }
 
-.header__link {
-    width: 32px;
+.header-profile {
+    width: 144px;
+    display: flex;
     height: 32px;
-    background-color: aqua;
 }
 
-.header__widget {
-    width: 32px;
-    height: 32px;
-    background-color: aqua;
+.header-profile__text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: none;
+    color: var(--color-snow);
 }
 
-.header__profile {
-    width: 32px;
-    height: 32px;
-    background-color: aqua;
+.header-profile__title {
+    overflow: inherit;
+    text-overflow: inherit;
+    word-wrap: inherit;
+    color: inherit;
+}
+
+.header-profile__cash {
+    overflow: inherit;
+    text-overflow: inherit;
+    word-wrap: inherit;
+    color: inherit;
 }
 
 .main {
@@ -227,8 +263,6 @@ html {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-right: 8px;
-    margin-bottom: 8px;
 }
 
 .icon_drag {
@@ -289,7 +323,7 @@ html {
     .sidebar {
         display: none;
     }
-    .header__content-right {
+    .header-right {
         visibility: visible;
     }
 }
@@ -313,6 +347,9 @@ html {
     }
     .control-panel {
         display: flex;
+    }
+    .header-right {
+        visibility: collapse;
     }
 }
 
