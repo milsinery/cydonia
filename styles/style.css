@@ -83,6 +83,7 @@ a {
 .wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     height: 100%;
     background-image: url(/assets/images/bg.jpg);
     background-size: cover;
@@ -140,6 +141,7 @@ a {
 .header-widget {
     display: flex;
     align-items: center;
+    margin-right: var(--space-normal);
 }
 
 .header-profile {
@@ -264,9 +266,14 @@ a {
 .card__nav {
     display: flex;
     flex-shrink: 1;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     text-overflow: clip;
     overflow: auto;
+}
+
+.card__nav::-webkit-scrollbar {
+    height: 0;
 }
 
 .card__nav-item {
@@ -356,13 +363,19 @@ a {
         padding-left: 0;
         padding-right: 0;
     }
-    .card .card__content .card__list .card__description {
+    .card__description {
         display: none;
     }
-    .card .card__content .card__list .card__nav {
+    .card__nav {
         display: none;
     }
-    .card .card__drag {
+    .card__drag {
+        display: none;
+    }
+    .card__content {
+        margin-bottom: 0;
+    }
+    .card__nav {
         display: none;
     }
     .control-panel {
