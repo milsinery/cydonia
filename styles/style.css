@@ -221,11 +221,12 @@ a {
     border-radius: 4px;
     min-height: 48px;
     min-width: 320px;
+    cursor: auto;
 }
 
 .card__content {
     display: flex;
-    margin: 8px 40px 8px 8px;
+    margin: 8px 40px 16px 8px;
 }
 
 .card__icon {
@@ -239,6 +240,7 @@ a {
 .card__list {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .card__title {
@@ -251,18 +253,36 @@ a {
     color: var(--color-sky);
 }
 
-.card__description {}
+.card__description {
+    margin-bottom: var(--space-normal);
+}
 
 .card__description .optional {
     color: var(--color-cloud);
 }
 
-.card__nav {}
+.card__nav {
+    display: flex;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: clip;
+    overflow: auto;
+}
+
+.card__nav-item {
+    color: var(--color-sky);
+    margin-right: var(--space-normal);
+}
+
+.card__nav-item a {
+    color: var(--color-sky);
+}
 
 .card__drag {
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: grab;
 }
 
 .icon_drag {
