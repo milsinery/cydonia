@@ -38,6 +38,16 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    background-image: url(/assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 /* Text styles */
 
@@ -72,23 +82,6 @@ a {
 
 
 /* Components */
-
-.icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--color-snow);
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 100%;
-    background-image: url(/assets/images/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .header {
     padding-left: var(--space-med);
@@ -176,7 +169,6 @@ a {
 .main {
     height: 100%;
     flex-basis: auto;
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     padding-left: 16px;
@@ -193,8 +185,8 @@ a {
 }
 
 .cards {
-    overflow: auto;
-    cursor: grab;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-content: stretch;
@@ -218,82 +210,16 @@ a {
 
 .card {
     position: relative;
-    overflow: hidden;
     background-color: var(--color-snow);
     border-radius: 4px;
     min-height: 48px;
     min-width: 320px;
-    cursor: auto;
-}
-
-.card__content {
-    display: flex;
-    margin: 8px 40px 16px 8px;
 }
 
 .card__icon {
-    margin-right: 8px;
-}
-
-.icon_test path {
     fill: var(--color-sky);
-}
-
-.card__list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.card__title {
-    color: var(--color-sky);
-    margin-bottom: var(--space-min);
-    padding-top: 4px;
-}
-
-.card__title .h2 {
-    color: var(--color-sky);
-}
-
-.card__description {
-    margin-bottom: var(--space-normal);
-}
-
-.card__description .optional {
-    color: var(--color-cloud);
-}
-
-.card__nav {
-    display: flex;
-    flex-shrink: 1;
-    overflow-x: auto;
-    overflow-y: hidden;
-    text-overflow: clip;
-    overflow: auto;
-}
-
-.card__nav::-webkit-scrollbar {
-    height: 0;
-}
-
-.card__nav-item {
-    color: var(--color-sky);
-    margin-right: var(--space-normal);
-}
-
-.card__nav-item a {
-    color: var(--color-sky);
-}
-
-.card__drag {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    cursor: grab;
-}
-
-.icon_drag {
-    background-color: var(--color-cloud);
+    height: 32px;
+    width: 32px;
 }
 
 .sidebar {
@@ -371,9 +297,6 @@ a {
     }
     .card__drag {
         display: none;
-    }
-    .card__content {
-        margin-bottom: 0;
     }
     .card__nav {
         display: none;
