@@ -16,6 +16,7 @@
     --text-normal: 14px;
     --text-med: 18px;
     --text-big: 24px;
+    --text-big-m: 20px;
     --text-hero: 32px;
 }
 
@@ -82,6 +83,15 @@ a {
 
 
 /* Components */
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.widget__icon {
+    fill: var(--color-snow);
+}
 
 .header {
     padding-left: var(--space-med);
@@ -337,6 +347,9 @@ a {
 /* Show mobile menu */
 
 @media (max-width: 480px) {
+    .h1 {
+        font-size: var(--text-big-m);
+    }
     .main {
         padding-left: 0;
         padding-right: 0;
