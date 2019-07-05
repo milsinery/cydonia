@@ -55,7 +55,7 @@ body {
 .h1 {
     font-size: var(--text-big);
     font-weight: 400;
-}
+}`
 
 .h2 {
     font-size: var(--text-med);
